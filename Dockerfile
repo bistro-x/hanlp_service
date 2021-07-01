@@ -10,5 +10,6 @@ RUN yum -y install python3 wget && wget https://files.pythonhosted.org/packages/
 RUN mv sentencepiece-0.1.96-cp36-cp36m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl sentencepiece-0.1.96-cp36-cp36m-linux_2_17_x86_64.linux_x86_64.whl
 RUN pip3 install sentencepiece-0.1.96-cp36-cp36m-linux_2_17_x86_64.linux_x86_64.whl
 RUN pip3 install -r ./requirements.txt
+RUN mv ./resources /root/.hanlp
 
 CMD ./run.sh
