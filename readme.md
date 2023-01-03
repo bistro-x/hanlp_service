@@ -1,9 +1,3 @@
-## 编译
-
-```shell
-docker build . --force-rm=true  -t server.aiknown.cn:31003/z_ai_service/hanlp_server:master && docker push server.aiknown.cn:31003/z_ai_service/hanlp_server:master
-```
-
 # Hanlp_server 服务
 
 整合 [HanLP](https://github.com/hankcs/HanLP) 提供分词的 API 服务 [HanLP 文档](https://hanlp.hankcs.com/docs/)
@@ -82,8 +76,21 @@ docker build . --force-rm=true  -t server.aiknown.cn:31003/z_ai_service/hanlp_se
 python run.py
 ```
 
-## 使用到的框架
+## docker
+
+### 编译
 
 ```shell
-hanlp
+docker build . --force-rm=true  -t wuhanchu/hanlp_service:master
+docker push wuhanchu/hanlp_service:master
 ```
+
+### 运行
+
+```shell
+docker run -p 5000:5000 wuhanchu/hanlp_service:master
+```
+
+## 使用到的框架
+
+hanlp
