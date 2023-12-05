@@ -82,6 +82,8 @@ python run.py
 
 ```shell
 docker build . --force-rm=true  -t wuhanchu/hanlp_service:master
+#docker build . -f ./Dockerfile.continue -t wuhanchu/hanlp_service:1.1
+
 docker push wuhanchu/hanlp_service:master
 ```
 

@@ -1,0 +1,9 @@
+FROM wuhanchu/hanlp_service:1.0
+WORKDIR /opt/service/
+USER root
+RUN groupadd -r mygroup && useradd --no-log-init -r -g mygroup myuser && mkdir /home/myuser && chmod -R 777 /home/myuser
+RUN mv /root/.hanlp /home/myuser/.hanlp
+
+RUN chmod -R 777 .
+RUN chmod  777 /
+USER myuser
